@@ -24,6 +24,8 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B  clean install package --file pom.xml
+    - name: check current working directory
+      run: pwd 
     - name: build docker image
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
