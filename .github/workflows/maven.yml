@@ -35,4 +35,8 @@ jobs:
         dockerfile: Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
+    - name: Scan image
+      uses: azure/container-scan@v0
+      with:
+          image-name: kserge2001/gitimage:v1
   
